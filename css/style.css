@@ -1,0 +1,156 @@
+body {
+  text-align: center;
+  font-size: 38px;
+  font-family: 'Shippori Mincho', serif;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.title {
+  width: 100%;
+  height: 100vh;
+  line-height: 100vh;
+  font-size: 50px;
+  margin-bottom: 200px;
+}
+
+.text-box {
+  padding-top: 100px;
+  padding-bottom: 600px;
+}
+
+.text-box p {
+  margin-bottom: 400px;
+  line-height: 5em;
+}
+
+.font {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  letter-spacing: 3px;
+}
+
+.group-2 {
+  width: 100%;
+  opacity: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.rain {
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  background-color: blue;
+  -webkit-animation: animate-rain 1.5s linear;
+          animation: animate-rain 1.5s linear;
+}
+
+@-webkit-keyframes animate-rain {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate-rain {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.background {
+  height: 100vh;
+  line-height: 100vh;
+  color: #fff;
+}
+
+.background .text-wrapper {
+  overflow: hidden;
+}
+
+.background .text-wrapper .letters {
+  opacity: 0;
+  display: inline-block;
+}
+
+.group-4 {
+  color: #000;
+  opacity: 0;
+  display: none;
+}
+
+.group-5 {
+  display: none;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sakura {
+  position: absolute;
+  background-color: #ffc0cd;
+  border-radius: 100% 0 100% 0;
+  -webkit-animation: animate-sakura 10s linear;
+          animation: animate-sakura 10s linear;
+}
+
+.sakura::after {
+  content: "";
+  position: absolute;
+  top: -14%;
+  left: -10%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc0cd;
+  border-radius: 100% 0 100% 0;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+@-webkit-keyframes animate-sakura {
+  0% {
+    opacity: 0;
+    top: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 100%;
+    -webkit-transform: rotate(3000deg);
+            transform: rotate(3000deg);
+  }
+}
+
+@keyframes animate-sakura {
+  0% {
+    opacity: 0;
+    top: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 100%;
+    -webkit-transform: rotate(3000deg);
+            transform: rotate(3000deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
