@@ -1,3 +1,7 @@
+.respon-br {
+  display: none;
+}
+
 p {
   opacity: 0;
   visibility: hidden;
@@ -70,6 +74,7 @@ p {
   padding-top: 80px;
   padding-bottom: 550px;
   display: none;
+  color: #000;
 }
 
 .group-4 p {
@@ -82,6 +87,7 @@ p {
   padding-bottom: 550px;
   display: none;
   position: relative;
+  color: #000;
 }
 
 .group-5 p {

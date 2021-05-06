@@ -5,12 +5,16 @@
 
         p{
             margin-bottom: 200px;
-            line-height: 4em;
+            line-height: 3em;
         }
     }
 
+    .respon-br{
+        display: block;
+    }
     .page-wrapper{
-        font-size: 14px;
+        font-size: 18px;
+        overflow: hidden;
     }
 
     .title-wrapper{

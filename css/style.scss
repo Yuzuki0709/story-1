@@ -8,6 +8,10 @@
     }
 }
 
+.respon-br{
+    display: none;
+}
+
 p{
     opacity: 0;
     visibility: hidden;
@@ -62,6 +66,7 @@ p{
 .group-4{
     @include textbox();
     display: none;
+    color: #000;
 }
 
 // グループ５
@@ -69,6 +74,7 @@ p{
     @include textbox();
     display: none;
     position: relative;
+    color: #000;
 }
 
 // キーワード

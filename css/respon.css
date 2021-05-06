@@ -1,6 +1,10 @@
 @media (max-width: 600px) {
+  .respon-br {
+    display: block;
+  }
   .page-wrapper {
-    font-size: 14px;
+    font-size: 18px;
+    overflow: hidden;
   }
   .title-wrapper {
     font-size: 20px;
