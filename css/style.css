@@ -1,52 +1,113 @@
-body {
+p {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.page-wrapper {
   text-align: center;
   font-size: 38px;
   font-family: 'Shippori Mincho', serif;
   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
-.title {
-  width: 100%;
+.title-wrapper {
   height: 100vh;
   line-height: 100vh;
-  font-size: 50px;
-  margin-bottom: 200px;
+  font-size: 45px;
 }
 
-.text-box {
-  padding-top: 100px;
-  padding-bottom: 600px;
+.title-wrapper .title {
+  opacity: 0;
 }
 
-.text-box p {
+.group-1 {
+  padding-top: 80px;
+  padding-bottom: 550px;
+}
+
+.group-1 p {
   margin-bottom: 400px;
   line-height: 5em;
 }
 
-.font {
-  font-family: 'Sawarabi Mincho', sans-serif;
-  letter-spacing: 3px;
+.group-2 {
+  padding-top: 80px;
+  padding-bottom: 550px;
+  position: relative;
+  color: #fff;
+  opacity: 0;
 }
 
-.group-2 {
-  width: 100%;
+.group-2 p {
+  margin-bottom: 400px;
+  line-height: 5em;
+}
+
+.group-3 {
+  padding-top: 80px;
+  padding-bottom: 550px;
   opacity: 0;
+  color: #000;
+}
+
+.group-3 p {
+  margin-bottom: 400px;
+  line-height: 5em;
+}
+
+.group-4 {
+  padding-top: 80px;
+  padding-bottom: 550px;
+  display: none;
+}
+
+.group-4 p {
+  margin-bottom: 400px;
+  line-height: 5em;
+}
+
+.group-5 {
+  padding-top: 80px;
+  padding-bottom: 550px;
+  display: none;
   position: relative;
-  overflow: hidden;
+}
+
+.group-5 p {
+  margin-bottom: 400px;
+  line-height: 5em;
+}
+
+.keywords {
+  height: 100vh;
+  line-height: 100vh;
+  color: #000;
 }
 
 .rain {
   position: absolute;
   width: 2px;
   height: 50px;
-  background-color: blue;
+  background-image: -webkit-gradient(linear, left top, right top, from(#6a11cb), to(#2575fc));
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   -webkit-animation: animate-rain 1.5s linear;
           animation: animate-rain 1.5s linear;
 }
 
 @-webkit-keyframes animate-rain {
   0% {
-    top: 0;
+    top: 0%;
   }
   100% {
     top: 100%;
@@ -55,39 +116,11 @@ body {
 
 @keyframes animate-rain {
   0% {
-    top: 0;
+    top: 0%;
   }
   100% {
     top: 100%;
   }
-}
-
-.background {
-  height: 100vh;
-  line-height: 100vh;
-  color: #fff;
-}
-
-.background .text-wrapper {
-  overflow: hidden;
-}
-
-.background .text-wrapper .letters {
-  opacity: 0;
-  display: inline-block;
-}
-
-.group-4 {
-  color: #000;
-  opacity: 0;
-  display: none;
-}
-
-.group-5 {
-  display: none;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
 }
 
 .sakura {
@@ -116,8 +149,8 @@ body {
   0% {
     opacity: 0;
     top: 0;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   10% {
     opacity: 1;
@@ -137,8 +170,8 @@ body {
   0% {
     opacity: 0;
     top: 0;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   10% {
     opacity: 1;

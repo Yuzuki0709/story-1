@@ -1,86 +1,107 @@
-body{
+@mixin textbox{
+    padding-top: 80px;
+    padding-bottom: 550px;
+
+    p{
+        margin-bottom: 400px;
+        line-height: 5em;
+    }
+}
+
+p{
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    transform: translateY(40px);
+}
+.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.page-wrapper{
     text-align: center;
     font-size: 38px;
     font-family: 'Shippori Mincho', serif;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
-.page-wrapper{
-}
-.title{
-    width: 100%;
+
+// タイトル
+.title-wrapper{
     height: 100vh;
     line-height: 100vh;
-    font-size: 50px;
-    margin-bottom: 200px;
-}
-.text-box{
-    padding-top: 100px;
-    padding-bottom: 600px;
-   // margin-bottom: 600px;
-    p{
-        margin-bottom: 400px;
-        line-height: 5em;
-    }
-    .feadIn{
+    font-size: 45px;
+
+    .title{
+        opacity: 0;
     }
 }
 
-.font{
-    font-family: 'Sawarabi Mincho', sans-serif;   
-    letter-spacing: 3px;
+// グループ１
+.group-1{
+    @include textbox();
 }
 
+// グループ２
 .group-2{
-    width: 100%;
-    opacity: 0;
+    @include textbox();
     position: relative;
-    overflow: hidden;
+    color: #fff;
+    opacity: 0;
 }
 
+// グループ３
+.group-3{
+    @include textbox();
+    opacity: 0;
+    color: #000;
+}
+
+// グループ４
+.group-4{
+    @include textbox();
+    display: none;
+}
+
+// グループ５
+.group-5{
+    @include textbox();
+    display: none;
+    position: relative;
+}
+
+// キーワード
+.keywords{
+    height: 100vh;
+    line-height: 100vh;
+    color: #000
+}
+
+
+
+
+
+
+
+// 雨
 .rain{
     position: absolute;
     width: 2px;
     height: 50px;
-    background-color: blue;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);    
     animation: animate-rain 1.5s linear;
 }
-
 @keyframes animate-rain{
     0%{
-        top: 0;
+        top: 0%;
     }
     100%{
         top: 100%;
     }
 }
-.background{
-    height: 100vh;
-    line-height: 100vh;
-    color: #fff;
-    .text-wrapper{
-        overflow: hidden;
 
-        .letters{
-            opacity: 0;
-            display: inline-block;
-        }
-    }
-    
-}
-
-.group-4{
-    color: #000;
-    opacity: 0;
-    display: none;
-}
-
-.group-5{
-    display: none;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
+// 桜
 .sakura{
     position: absolute;
     background-color: #ffc0cd;
@@ -105,7 +126,7 @@ body{
     0%{
         opacity: 0;
         top: 0;
-        transform: rotate(0deg);
+        transform: rotate(0);
     }
     10%{
         opacity: 1;
